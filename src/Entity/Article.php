@@ -33,9 +33,10 @@ class Article
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'articles')]
     private Collection $categories;
 
-    #[ORM\Column(length: 200)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $image = null;
 
+   
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -131,6 +132,8 @@ class Article
 
         return $this;
     }
+
+
 
     
 }
