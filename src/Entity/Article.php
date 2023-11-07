@@ -23,7 +23,7 @@ class Article
     #[ORM\Column(type: Types::TEXT)]
     private ?string $contenue = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable:true)]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'articles')]
