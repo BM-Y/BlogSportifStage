@@ -1,0 +1,23 @@
+
+{%  extends "base.html.twig" %}
+{% block title %}Hello sur Le blog Sportif{% endblock %}
+
+{% block body %}
+
+<section class="container text-center">
+    <ul>
+    {% for article in articles %}
+
+        <li>
+            <h3>{{ article.titre}}</h3>
+            <h5>{{ article.contenue}}</h5>
+            {# <h5>{{ article.date}}</h5> #}
+            <img src="{{ article.image}}" alt="" />
+            
+        </li>
+            
+    {% endfor %}
+      
+    </ul>
+</section>
+{% endblock %}
