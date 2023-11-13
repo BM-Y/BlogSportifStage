@@ -21,12 +21,15 @@ security:
             form_login:
                 login_path: app_login
                 check_path: app_login
-            logout:
-                path: app_logout
+                default_target_path: article_index
+              
 
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
+            logout:
+                path: app_logout
+                target: article_index
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
